@@ -1,17 +1,24 @@
+<?php
+include("koneksi.php");
+
+// query untuk menampilkan data
+$sql = 'SELECT * FROM data_barang';
+$result = mysqli_query($conn, $sql);
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Contoh Modularisasi</title>
-    <link href="style.css" rel="stylesheet" type="text/stylesheet" media="screen" />
+    <title>Tugas PHP Modularitas</title>
+    <link href="tampilan.css" rel="stylesheet" type="text/css" />
 </head>
 <body>
-    <div class="container">
+    <div id="container">
         <header>
-            <h1>Modularisasi Menggunakan Require</h1>
+            <h1>Pertanyaan dan Tugas</h1>
         </header>
         <nav>
-        <a href="home.php">Home</a>
-        <a href="about.php">Tentang</a>
-        <a href="kontak.php">Kontak</a>
+            <a href="home.php">Home</a>
+            <a href="tambah.php">Tambah Barang</a>
         </nav>
